@@ -1,1 +1,10 @@
-<p>login works!</p>
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="user.email" name="email" required />
+  
+    <label>Jelszó:</label>
+    <input type="password" [(ngModel)]="user.password" name="password" required />
+  
+    <button type="submit">Regisztráció</button>
+  </form>
+  

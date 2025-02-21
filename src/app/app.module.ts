@@ -8,6 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { ReserveComponent } from './reserve/reserve.component';
 import { HomeComponent } from './home/home.component';
 import { CheckreservedComponent } from './checkreserved/checkreserved.component';
+import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,16 @@ import { CheckreservedComponent } from './checkreserved/checkreserved.component'
     LoginComponent,
     ReserveComponent,
     HomeComponent,
-    CheckreservedComponent
+    CheckreservedComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
-  ],
-  providers: [],
+    AppRoutingModule,
+    RegisterComponent]
+    
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
